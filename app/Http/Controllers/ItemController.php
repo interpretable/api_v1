@@ -127,7 +127,7 @@ class ItemController extends Controller
         ($request->card_id) ? $item->update(['card_id' => $request->card_id,]) : '';
         ($request->thematic_id) ? $item->update(['thematic_id' => $request->thematic_id,]) : '';
         ($request->medias) ? $item->update(['medias' => $request->$media_path,]) : '';
-        
+        ($request->card_picture) ? $item->update(['card_picture' => $card_picture_path,]) : '';
         //$item->save();
         return response()->json($item, 201);
     }
