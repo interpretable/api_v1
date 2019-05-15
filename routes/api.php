@@ -28,3 +28,10 @@ Route::get('item/delete/{id}', 'ItemController@deleteItem');
 
 // Thematics CRUD
 Route::get('thematics', 'ThematicController@listThemes');
+
+
+//Monitor
+Route::post('machine/{id}', 'MachineController@sendIp');
+
+// Oauth On this route + https
+Route::get('machines', 'MachineController@getIp');
