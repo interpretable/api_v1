@@ -12,6 +12,24 @@ class ItemTableSeeder extends Seeder
     public function run()
     {
 
+        // BONJOUR
+        Item::create([
+            'name' => 'BONJOUR',
+            'medias' => ["default/BONJOUR/zone1.png"],
+            'card_id' => 0,
+            'card_picture' => 'default/BONJOUR/carte.jpg',
+            'thematic_id' => 0
+        ]);
+        // BONJOUR
+        Item::create([
+            'name' => 'AUREVOIR',
+            'medias' => ["default/AUREVOIR/zone1.png"],
+            'card_id' => 0,
+            'card_picture' => 'default/AUREVOIR/carte.jpg',
+            'thematic_id' => 0
+        ]);
+
+
         // ALIMENTATION
         Item::create([
             'name' => 'alimentation',
