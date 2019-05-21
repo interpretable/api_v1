@@ -35,3 +35,7 @@ Route::post('machine/{id}', 'MachineController@sendIp');
 
 // Oauth On this route + https
 Route::get('machines', 'MachineController@getIp');
+
+Route::get('machines', function(Request $request) {
+    return $request->user();
+});

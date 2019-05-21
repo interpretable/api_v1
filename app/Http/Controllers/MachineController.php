@@ -21,6 +21,10 @@ class MachineController extends Controller
     // Oauth On this route + https
     public function getIp()
     {
+        var_dump($request);
+        if(env('AUTH_TOKEN')){
+
+        }
         $machine = Machine::all();
         return response()->json($machine, 201);
     }
