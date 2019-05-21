@@ -15,5 +15,7 @@ class ThematicTableSeeder extends Seeder
         Thematic::create(['name' => 'ALIMENTATION',]);
         Thematic::create(['name' => 'SOMMEIL',]);
         Thematic::create(['name' => 'SANTE',]);
+        Thematic::create(['name' => 'BONJOUR',]);
+        Thematic::create(['name' => 'AUREVOIR',]);
     }
 }

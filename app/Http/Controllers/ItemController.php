@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Item;
+use App\Thematic;
 
 
 class ItemController extends Controller
@@ -14,22 +15,33 @@ class ItemController extends Controller
     public function listItems()
     {
         $items = Item::all();
+        //$items = Item::with('thematic')->get();
         $media_url = array();
 
+        //$thematic = $item->phone;
+
+        //var_dump($thematic);
         // gets the api absolute url to media
         // TODO create a service or middleware
         foreach($items as $item){
+            
+            // Todo Eloquent Relation One to One
+            if($item->thematic_id){
+                $thematic = Thematic::find($item->thematic_id);
+            }
+            
             $item->card_picture = asset('/medias').'/'.$item->card_picture;
             //if(!$item->medias == 'null'){
                 foreach($item->medias as $media){
                     array_push($media_url,asset('/medias').'/'.$media );
                 }
                 $item->medias = $media_url;
+                $item->thematic_name = $thematic->name;
                 $media_url = array();
                 
             //}
         }
-        return $items;
+    return $items;
     }
 
     // List a single item

@@ -9,8 +9,8 @@ class Thematic extends Model
     protected $fillable = [
         'name'
     ];
-    public function thematics(){
-        return $this->hasOne('\App\Thematics');
+    public function item(){
+        return $this->hasMany('\App\Item');
     }
 
 }

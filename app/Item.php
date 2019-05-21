@@ -23,8 +23,8 @@ class Item extends Model
         'medias' => 'array'
     ];
 
-    public function thematics(){
-        //return $this->hasOne('\App\Thematic');
+    public function thematic(){
+        return $this->hasOne('\App\Thematic');
     }
 
 }

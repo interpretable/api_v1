@@ -18,7 +18,7 @@ class ItemTableSeeder extends Seeder
             'medias' => ["default/BONJOUR/zone1.png"],
             'card_id' => 0,
             'card_picture' => 'default/BONJOUR/carte.jpg',
-            'thematic_id' => 0
+            'thematic_id' => 4
         ]);
         // BONJOUR
         Item::create([
@@ -26,7 +26,7 @@ class ItemTableSeeder extends Seeder
             'medias' => ["default/AUREVOIR/zone1.png"],
             'card_id' => 0,
             'card_picture' => 'default/AUREVOIR/carte.jpg',
-            'thematic_id' => 0
+            'thematic_id' => 5
         ]);
 
 
@@ -36,7 +36,7 @@ class ItemTableSeeder extends Seeder
             'medias' => ["default/ALIMENTATION/zone1.png"],
             'card_id' => 0,
             'card_picture' => 'default/ALIMENTATION/carte.jpg',
-            'thematic_id' => 0
+            'thematic_id' => 1
         ]);
         Item::create([
             'name' => 'feculents_viandes_sucres_gras',
@@ -48,7 +48,7 @@ class ItemTableSeeder extends Seeder
             ],
             'card_id' => 0,
             'card_picture' => 'default/ALIMENTATION/feculents_viandes_sucres_gras/carte.jpg',
-            'thematic_id' => 0
+            'thematic_id' => 1
         ]);
         Item::create([
             'name' => 'fruits_legumes',
@@ -58,7 +58,7 @@ class ItemTableSeeder extends Seeder
             ],
             'card_id' => 0,
             'card_picture' => 'default/ALIMENTATION/fruits_legumes/carte.jpg',
-            'thematic_id' => 0
+            'thematic_id' => 1
         ]);
         Item::create([
             'name' => 'lait_artificiel',
@@ -69,7 +69,7 @@ class ItemTableSeeder extends Seeder
             ],
             'card_id' => 0,
             'card_picture' => 'default/ALIMENTATION/lait_artificiel/carte.jpg',
-            'thematic_id' => 0
+            'thematic_id' => 1
         ]);
         Item::create([
             'name' => 'positions_allaitement',
@@ -78,7 +78,7 @@ class ItemTableSeeder extends Seeder
             ],
             'card_id' => 0,
             'card_picture' => 'default/ALIMENTATION/positions_allaitement/carte.jpg',
-            'thematic_id' => 0
+            'thematic_id' => 1
         ]);
         Item::create([
             'name' => 'problemes_alimentaires',
@@ -90,7 +90,7 @@ class ItemTableSeeder extends Seeder
             ],
             'card_id' => 0,
             'card_picture' => 'default/ALIMENTATION/problemes_alimentaires/carte.jpg',
-            'thematic_id' => 0
+            'thematic_id' => 1
         ]);
         Item::create([
             'name' => 'selles_urine_regurgitation',
@@ -102,7 +102,7 @@ class ItemTableSeeder extends Seeder
             ],
             'card_id' => 0,
             'card_picture' => 'default/ALIMENTATION/selles_urine_regurgitation/carte.jpg',
-            'thematic_id' => 0
+            'thematic_id' => 1
         ]);
 
         // SANTE
@@ -113,7 +113,7 @@ class ItemTableSeeder extends Seeder
             ],
             'card_id' => 0,
             'card_picture' => 'default/SANTE/carte.jpg',
-            'thematic_id' => 0
+            'thematic_id' => 3
         ]);
         Item::create([
             'name' => 'accouchement',
@@ -124,7 +124,7 @@ class ItemTableSeeder extends Seeder
             ],
             'card_id' => 0,
             'card_picture' => 'default/SANTE/accouchement/carte.jpg',
-            'thematic_id' => 0
+            'thematic_id' => 3
         ]);
         Item::create([
             'name' => 'asthme_allergies',
@@ -135,7 +135,7 @@ class ItemTableSeeder extends Seeder
             ],
             'card_id' => 0,
             'card_picture' => 'default/SANTE/asthme_allergies/carte.jpg',
-            'thematic_id' => 0
+            'thematic_id' => 3
         ]);
         Item::create([
             'name' => 'douleurs_fievre',
@@ -144,7 +144,7 @@ class ItemTableSeeder extends Seeder
             ],
             'card_id' => 0,
             'card_picture' => 'default/SANTE/douleurs_fievre/carte.jpg',
-            'thematic_id' => 0
+            'thematic_id' => 3
         ]);
         Item::create([
             'name' => 'grossesse',
@@ -156,7 +156,7 @@ class ItemTableSeeder extends Seeder
             ],
             'card_id' => 0,
             'card_picture' => 'default/SANTE/grossesse/carte.jpg',
-            'thematic_id' => 0
+            'thematic_id' => 3
         ]);
         Item::create([
             'name' => 'hanche',
@@ -167,7 +167,7 @@ class ItemTableSeeder extends Seeder
             ],
             'card_id' => 0,
             'card_picture' => 'default/SANTE/hanche/carte.jpg',
-            'thematic_id' => 0
+            'thematic_id' => 3
         ]);
         Item::create([
             'name' => 'hygiene',
@@ -178,7 +178,7 @@ class ItemTableSeeder extends Seeder
             ],
             'card_id' => 0,
             'card_picture' => 'default/SANTE/hygiene/carte.jpg',
-            'thematic_id' => 0
+            'thematic_id' => 3
         ]);
         Item::create([
             'name' => 'medication',
@@ -190,7 +190,7 @@ class ItemTableSeeder extends Seeder
             ],
             'card_id' => 0,
             'card_picture' => 'default/SANTE/medication/carte.jpg',
-            'thematic_id' => 0
+            'thematic_id' => 3
         ]);
         Item::create([
             'name' => 'problemes_cutanes',
@@ -201,7 +201,7 @@ class ItemTableSeeder extends Seeder
             ],
             'card_id' => 0,
             'card_picture' => 'default/SANTE/problemes_cutanes/carte.jpg',
-            'thematic_id' => 0
+            'thematic_id' => 3
         ]);
 
         // SOMMEIL
@@ -212,7 +212,7 @@ class ItemTableSeeder extends Seeder
             ],
             'card_id' => 0,
             'card_picture' => 'default/SOMMEIL/carte.jpg',
-            'thematic_id' => 0
+            'thematic_id' => 2
         ]);
         Item::create([
             'name' => 'lits_accessoires',
@@ -223,7 +223,7 @@ class ItemTableSeeder extends Seeder
             ],
             'card_id' => 0,
             'card_picture' => 'default/SOMMEIL/lits_accessoires/carte.jpg',
-            'thematic_id' => 0
+            'thematic_id' => 2
         ]);
         Item::create([
             'name' => 'phases_sommeil',
@@ -234,7 +234,7 @@ class ItemTableSeeder extends Seeder
             ],
             'card_id' => 0,
             'card_picture' => 'default/SOMMEIL/phases_sommeil/carte.jpg',
-            'thematic_id' => 0
+            'thematic_id' => 2
         ]);
         Item::create([
             'name' => 'securite_lit',
@@ -245,7 +245,7 @@ class ItemTableSeeder extends Seeder
             ],
             'card_id' => 0,
             'card_picture' => 'default/SOMMEIL/securite_lit/carte.jpg',
-            'thematic_id' => 0
+            'thematic_id' => 2
         ]);
     }
 }
