@@ -24,6 +24,9 @@ And edit this file to fit your db settings
 Migrate the db table structure with
 > php artisan migrate
 
+And seed the default cards/thematics/machines
+> php artisan db:seed
+
 For development purpose you can use
 > php artisan serve 
 
