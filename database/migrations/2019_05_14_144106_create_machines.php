@@ -18,6 +18,7 @@ class CreateMachines extends Migration
             $table->timestamps();
             $table->string('name');
             $table->string('ip');
+            $table->json('logs');
         });
     }
 

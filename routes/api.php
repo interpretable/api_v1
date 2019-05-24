@@ -14,9 +14,14 @@ use App\Item;
 |
 */
 
+if (env('APP_ENV') === 'production') {
+    URL::forceScheme('https');
+}
+
+
 // Table state
-Route::get('state', 'TableController@state');
-Route::post('state/{id}', 'TableController@setCardId');
+/*Route::get('state', 'TableController@state');
+Route::post('state/{id}', 'TableController@setCardId');*/
 
 // Item CRUD
 Route::get('items', 'ItemController@listItems');
@@ -30,12 +35,13 @@ Route::get('item/delete/{id}', 'ItemController@deleteItem');
 Route::get('thematics', 'ThematicController@listThemes');
 
 
-//Monitor
-Route::post('machine/{id}', 'MachineController@sendIp');
+// Updates a machine based on id in url
+Route::post('machine/{id}', 'MachineController@updateMachine');
 
-// Oauth On this route + https
-Route::get('machines', 'MachineController@getIp');
+// Lists a machine in db based on url id
+Route::get('machine/{id}', 'MachineController@listMachine');
 
-Route::get('machines', function(Request $request) {
-    return $request->user();
-});
+// Lists every machine in db
+Route::get('machines', 'MachineController@listMachines');
+
+

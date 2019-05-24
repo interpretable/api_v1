@@ -1,6 +1,9 @@
 /node_modules
 /public/hot
 /public/medias/*
+/public/machines/*
+!/public/machines/.htaccess
+!/public/machines/example.htpasswd
 !public/medias/default
 /public/storage
 /storage/*.key

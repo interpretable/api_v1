@@ -9,10 +9,17 @@ class Machine extends Model
     protected $fillable = [
         'ip',
         'name',
-        'id'
+        'id',
+        'logs'
     ];
+
+    protected $casts = [
+        'logs' => 'array'
+    ];
+
 
     protected $attributes = [
         'ip' => 'null',
+        'logs' => '[]'
     ];
 }
