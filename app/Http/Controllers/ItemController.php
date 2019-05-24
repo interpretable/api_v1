@@ -15,13 +15,9 @@ class ItemController extends Controller
     public function listItems()
     {
         $items = Item::all();
-        //$items = Item::with('thematic')->get();
+
         $media_url = array();
 
-        //$thematic = $item->phone;
-
-        //var_dump($thematic);
-        // gets the api absolute url to media
         // TODO create a service or middleware
         foreach($items as $item){
             
@@ -31,15 +27,14 @@ class ItemController extends Controller
             }
             
             $item->card_picture = asset('/medias').'/'.$item->card_picture;
-            //if(!$item->medias == 'null'){
+
+                // gets the api absolute url to media
                 foreach($item->medias as $media){
                     array_push($media_url,asset('/medias').'/'.$media );
                 }
                 $item->medias = $media_url;
                 $item->thematic_name = $thematic->name;
                 $media_url = array();
-                
-            //}
         }
     return $items;
     }
@@ -49,6 +44,7 @@ class ItemController extends Controller
     {
         $item = Item::find($id);
         $media_url = array();
+
         // gets the api absolute url to media
         // TODO create a service or middleware
         foreach($item->medias as $medias){
@@ -73,6 +69,7 @@ class ItemController extends Controller
             'card_picture' => 'null',
             //'thematic_id' => 'thematic_id',
         ]);
+
         // TODO Check file size and mime type (png/jpeg < 2mb)
         // TODO Compress if image 
         // TODO Check resolution on each use case
@@ -109,9 +106,6 @@ class ItemController extends Controller
     // Update a single item based on his id
     public function updateItem($id,Request $request)
     {
-        //var_dump($id);
-        //var_dump($request->name);
-
         $item = Item::findOrFail($id);
 
 
@@ -140,7 +134,6 @@ class ItemController extends Controller
         ($request->thematic_id) ? $item->update(['thematic_id' => $request->thematic_id,]) : '';
         ($request->medias) ? $item->update(['medias' => $request->$media_path,]) : '';
         ($request->card_picture) ? $item->update(['card_picture' => $card_picture_path,]) : '';
-        //$item->save();
         return response()->json($item, 201);
     }
 

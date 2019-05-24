@@ -78,7 +78,6 @@ class MachineController extends Controller
             foreach ($machine->logs as $log) {
                 
                 $log = json_decode(file_get_contents($log), true); 
-                //var_dump($log);
                 array_push($json, $log);
             }
 
