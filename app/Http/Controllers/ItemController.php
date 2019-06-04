@@ -85,9 +85,14 @@ class ItemController extends Controller
         // For each defined zone move file to directory and add to $media_path Array
         for ($i=1; $i < 5; $i++) { 
             $file = $request->file('zone'.$i);
-            if($file){
-                array_push($media_path, $item->id.'/'.$file->getClientOriginalName());
-                $file->move($destinationPath,$file->getClientOriginalName());
+            if($file->getClientOriginalExtension() == 'png'){ 
+                if($file){
+                    array_push($media_path, $item->id.'/'.$file->getClientOriginalName());
+                    $file->move($destinationPath,$file->getClientOriginalName());
+                }
+            }
+            else {
+                return "The zone medias need to be in png";
             }
         }
        
@@ -121,11 +126,17 @@ class ItemController extends Controller
         
         // Checks if files are uploaded
         if($request->file){
+            
             // For each defined zone move file to directory and add to $media_path Array
             for ($i=1; $i < 5; $i++) { 
                 $file = $request->file('zone'.$i);
-                array_push($media_path, $item->id.'/'.$file->getClientOriginalName());
-                $file->move($destinationPath,$file->getClientOriginalName());
+                if($file->getClientOriginalExtension() == 'png'){ 
+                    array_push($media_path, $item->id.'/'.$file->getClientOriginalName());
+                    $file->move($destinationPath,$file->getClientOriginalName());
+                }
+                else{
+                    return "The zone medias need to be in png";
+                }
             }
         }
 
