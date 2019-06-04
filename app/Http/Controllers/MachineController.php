@@ -48,17 +48,19 @@ class MachineController extends Controller
         ($machine->logs) ? $logs = $machine->logs : $logs = array();
        
         // Adds the path of the moved log file in db
-        if ($logs) {
-            array_push($logs, $destinationPath.'/'.$file->getClientOriginalName());
-            $machine->update(['logs' => $logs]);
-        }
-        /** If logs are empty in db creates an array 
-        *** pushes the log path and updates the db
-        **/
-        else {
-            $logs = array();
-            array_push($logs, $destinationPath.'/'.$file->getClientOriginalName());
-            $machine->update(['logs' => $logs]);
+        if($file){
+            if ($logs) {
+                array_push($logs, $destinationPath.'/'.$file->getClientOriginalName());
+                $machine->update(['logs' => $logs]);
+            }
+            /** If logs are empty in db creates an array 
+            *** pushes the log path and updates the db
+            **/
+            else {
+                $logs = array();
+                array_push($logs, $destinationPath.'/'.$file->getClientOriginalName());
+                $machine->update(['logs' => $logs]);
+            }
         }
 
         // Updates the machine's ip in the db
@@ -76,7 +78,7 @@ class MachineController extends Controller
         // Returns in array the content of the log files
         if($machine->logs){
             foreach ($machine->logs as $log) {
-                
+                //var_dump($log);
                 $log = json_decode(file_get_contents($log), true); 
                 array_push($json, $log);
             }
@@ -86,6 +88,11 @@ class MachineController extends Controller
         $machine->logs = $json;      
         
         return response()->json($machine, 201);
+    }
+
+    public function shutdown()
+    {
+        
     }
     
 }
