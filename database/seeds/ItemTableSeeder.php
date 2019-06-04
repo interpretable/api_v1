@@ -140,7 +140,7 @@ class ItemTableSeeder extends Seeder
         Item::create([
             'name' => 'douleurs_fievre',
             'medias' => [
-                "default/SANTE/asthme_allergies/zone1.png"
+                "default/SANTE/douleurs_fievre/zone1.png"
             ],
             'card_id' => 0,
             'card_picture' => 'default/SANTE/douleurs_fievre/carte.jpg',
