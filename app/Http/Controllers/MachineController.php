@@ -66,7 +66,7 @@ class MachineController extends Controller
         // Updates the machine's ip in the db
         ($request->ip) ? $machine->update(['ip' => $request->ip]) : '';
         
-        return response()->json($machine, 201);
+        return response()->json($file->getClientOriginalName(), 200);
     }
 
     public function listMachine($id)
