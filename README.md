@@ -238,19 +238,7 @@ Updates a specific machine based on id
 
 **Returns :**
 ```json
-{
-    "id": 0,
-    "created_at": "2019-05-23 13:41:14",
-    "updated_at": "2019-05-24 15:03:35",
-    "name": "name",
-    "ip": "ip",
-    "logs": [
-        "url_to_log",
-        "url_to_log",
-        "url_to_log",
-        "url_to_log"
-    ]
-}
+uploaded_file_name
 ```
 
 
