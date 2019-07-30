@@ -12,8 +12,10 @@ class MachineTableSeeder extends Seeder
      */
     public function run()
     {
-        Machine::create(['id' => '1','name' => 'MDM Bramet - Bron',]);
-        Machine::create(['id' => '2', 'name' => 'MDM Fontaine-sur-Saône',]);
-        Machine::create(['id' => '3','name' => 'MDM Jean Jaurès - Vaulx-en-Velin',]);
+        #Machine::create(['id' => '1','name' => 'MDM Bramet - Bron',]);
+        #Machine::create(['id' => '2', 'name' => 'MDM Fontaine-sur-Saône',]);
+        #Machine::create(['id' => '3','name' => 'MDM Jean Jaurès - Vaulx-en-Velin',]);
+        #Machine::create(['id' => '4','name' => 'MDM Erasme - Demo',]);
+        Machine::create(['id' => '5','name' => 'MDM Erasme - Demo',]);
     }
 }
