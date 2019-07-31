@@ -44,4 +44,5 @@ Route::get('machine/{id}', 'MachineController@listMachine');
 // Lists every machine in db
 Route::get('machines', 'MachineController@listMachines');
 
+Route::get('machine/shutdown', 'MachineController@shutdown');
 

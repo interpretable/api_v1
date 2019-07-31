@@ -1,0 +1,447 @@
+{
+	"info": {
+		"_postman_id": "12a152da-02d0-455f-8d08-6b47d994c8d2",
+		"name": "Interpretabble-LARAVEL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "items",
+			"item": [
+				{
+					"name": "Create Item",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "name",
+								"value": "test",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Default",
+									"type": "text"
+								},
+								{
+									"key": "card_id",
+									"value": "47",
+									"type": "text"
+								},
+								{
+									"key": "card_picture",
+									"type": "file",
+									"src": ""
+								},
+								{
+									"key": "zone1",
+									"type": "file",
+									"src": ""
+								},
+								{
+									"key": "zone2",
+									"type": "file",
+									"src": ""
+								},
+								{
+									"key": "zone3",
+									"type": "file",
+									"src": ""
+								},
+								{
+									"key": "zone4",
+									"type": "file",
+									"src": ""
+								},
+								{
+									"key": "media5",
+									"type": "file",
+									"src": "",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/item/new",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"item",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Items",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/items",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"items"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List One Item",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/item/5",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"item",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update item",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Updated",
+									"type": "text"
+								},
+								{
+									"key": "card_id",
+									"value": "666",
+									"type": "text"
+								},
+								{
+									"key": "thematic_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "card_picture",
+									"type": "file",
+									"src": ""
+								},
+								{
+									"key": "zone1",
+									"type": "file",
+									"src": "",
+									"disabled": true
+								},
+								{
+									"key": "zone2",
+									"type": "file",
+									"src": "",
+									"disabled": true
+								},
+								{
+									"key": "zone3",
+									"type": "file",
+									"src": "",
+									"disabled": true
+								},
+								{
+									"key": "zone4",
+									"type": "file",
+									"src": "",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/item/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"item",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Item",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/item/delete/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"item",
+								"delete",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Image in item",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/item/image/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"item",
+								"image",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Item",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "name",
+								"value": "test",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "test",
+									"type": "text"
+								},
+								{
+									"key": "medias",
+									"value": "null",
+									"type": "text"
+								},
+								{
+									"key": "children",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/item/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"item",
+								"1"
+							]
+						},
+						"description": "Npon testée avec la nouvelle version"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "machines",
+			"item": [
+				{
+					"name": "List machine",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{url}}/api/machine/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"machine",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update machine",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "ip",
+									"value": "192.168.0.1",
+									"type": "text"
+								},
+								{
+									"key": "log",
+									"type": "file",
+									"src": ""
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/machine/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"machine",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List machines",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{url}}/api/machines",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"machines"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "thematics",
+			"item": [
+				{
+					"name": "List thematics",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/items",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"items"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "table",
+			"item": [
+				{
+					"name": "State Table",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/items",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"items"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

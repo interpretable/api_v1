@@ -197,7 +197,7 @@ class ItemTableSeeder extends Seeder
             'medias' => [
                 "default/SANTE/problemes_cutanes/zone1.png",
                 "default/SANTE/problemes_cutanes/zone2.png", 
-                "default/SANTE/problemes_cutanes/zone3.png",
+cd                "default/SANTE/problemes_cutanes/zone3.png",
                 "default/SANTE/problemes_cutanes/zone4.png"
             ],
             'card_id' => 0,

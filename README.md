@@ -1,6 +1,9 @@
 # Interpretabble-api
 Laravel based api for Interpretabble
 
+## TODO
+- Give permission to the update route to update entierly the item
+
 ## Requirements :
 - Composer
 
@@ -29,6 +32,8 @@ And seed the default cards/thematics/machines
 
 For development purpose you can use
 > php artisan serve 
+
+
 
 To serve your api
 
@@ -92,6 +97,7 @@ Lists every item in db
         "medias": [
             "url_to_media"
         ],
+        
         "card_id": 0,
         "card_picture": "url_to_media_",
         "thematic_id": 4,
@@ -122,7 +128,7 @@ Lists a specific item based on his id
 ```
 
 
-**POST** api/item{id}
+**POST** api/item
 Creates a new item
 **Parameters :**
 - Header
@@ -154,6 +160,35 @@ Creates a new item
     "id": 0
 }
 ```
+
+**POST** api/item/{id}
+Updates a new item
+**Parameters :**
+- Header
+  - Content-Type:application/x-www-form-urlencoded
+- Body  form-data
+  - card_picture
+
+**Returns :**
+```json
+{
+    "card_picture": "url_to_media",
+    "thematic_id": 0,
+    "name": "name",
+    "medias": [
+        "url_to_media",
+        "url_to_media",
+        "url_to_media",
+        "url_to_media"
+    ],
+    "card_id": "0",
+    "updated_at": "2019-05-24 14:49:46",
+    "created_at": "2019-05-24 14:49:46",
+    "id": 0
+}
+```
+
+
 
 
 **DELETE** api/item/{id}
@@ -213,20 +248,22 @@ Lists every machine in db
 **GET** api/machine/{id}
 Lists a specific machine in db
 ```json
-[
-    {
-        "id": 0,
-        "created_at": "2019-05-23 13:41:14",
-        "updated_at": "2019-05-23 13:41:25",
-        "name": "name",
-        "ip": "ip",
-        "logs": [
-            "url_to_log",
-            "url_to_log",
-            "url_to_log"
-        ]
-    }
-]
+{
+    "id": 1,
+    "created_at": "2019-07-15 13:08:54",
+    "updated_at": "2019-07-22 14:06:19",
+    "name": "Machine name",
+    "ip": "ip",
+    "logs": [
+        {
+            "cards": [],
+            "start": {
+                "time": "15-07-2019 15-17-39"
+            }
+        }
+    ]
+}
+
 ```
 
 **POST** api/machine/{id}
@@ -241,4 +278,16 @@ Updates a specific machine based on id
 uploaded_file_name
 ```
 
+
+### PHP Artisan
+
+The API has default cards and machines who can be seeded in the DB,
+
+> php artisan migrate 
+
+Will init the table structure needed to work
+
+> php artisan db:seed
+
+Will add every default card and machines to the API
 
