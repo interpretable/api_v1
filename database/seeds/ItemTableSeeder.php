@@ -196,12 +196,23 @@ class ItemTableSeeder extends Seeder
             'name' => 'problemes_cutanes',
             'medias' => [
                 "default/SANTE/problemes_cutanes/zone1.png",
-                "default/SANTE/problemes_cutanes/zone2.png", 
-cd                "default/SANTE/problemes_cutanes/zone3.png",
+                "default/SANTE/problemes_cutanes/zone2.png",
+                "default/SANTE/problemes_cutanes/zone3.png",
                 "default/SANTE/problemes_cutanes/zone4.png"
             ],
             'card_id' => 0,
             'card_picture' => 'default/SANTE/problemes_cutanes/carte.jpg',
+            'thematic_id' => 3
+        ]);
+        Item::create([
+            'name' => 'ecrans',
+            'medias' => [
+                "default/SANTE/ecrans/zone1.png",
+                "default/SANTE/ecrans/zone2.png",
+                "default/SANTE/ecrans/zone3.png"
+            ],
+            'card_id' => 0,
+            'card_picture' => 'default/SANTE/ecrans/carte.jpg',
             'thematic_id' => 3
         ]);
 
