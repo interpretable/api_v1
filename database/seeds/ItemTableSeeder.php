@@ -105,6 +105,49 @@ class ItemTableSeeder extends Seeder
             'thematic_id' => 1
         ]);
 
+        // CADRE DE VIE
+        Item::create([
+            'name' => 'cadreDeVie',
+            'medias' => [
+                "default/CADREDEVIE/zone1.png"
+            ],
+            'card_id' => 0,
+            'card_picture' => 'default/CADREDEVIE/carte.jpg',
+            'thematic_id' => 6
+        ]);
+        Item::create([
+            'name' => 'admin',
+            'medias' => [
+                "default/CADREDEVIE/admin/zone1.png",
+                "default/CADREDEVIE/admin/zone2.png",
+                "default/CADREDEVIE/admin/zone3.png"
+            ],
+            'card_id' => 0,
+            'card_picture' => 'default/CADREDEVIE/admin/carte.jpg',
+            'thematic_id' => 6
+        ]);
+        Item::create([
+            'name' => 'habitat',
+            'medias' => [
+                "default/CADREDEVIE/habitat/zone1.png",
+                "default/CADREDEVIE/habitat/zone2.png",
+                "default/CADREDEVIE/habitat/zone3.png"
+            ],
+            'card_id' => 0,
+            'card_picture' => 'default/CADREDEVIE/habitat/carte.jpg',
+            'thematic_id' => 6
+        ]);
+        Item::create([
+            'name' => 'modesDeGarde',
+            'medias' => [
+                "default/CADREDEVIE/modesDeGarde/zone1.png",
+                "default/CADREDEVIE/modesDeGarde/zone2.png"
+            ],
+            'card_id' => 0,
+            'card_picture' => 'default/CADREDEVIE/modesDeGarde/carte.jpg',
+            'thematic_id' => 6
+        ]);
+
         // SANTE
         Item::create([
             'name' => 'sante',
@@ -213,6 +256,18 @@ class ItemTableSeeder extends Seeder
             ],
             'card_id' => 0,
             'card_picture' => 'default/SANTE/ecrans/carte.jpg',
+            'thematic_id' => 3
+        ]);
+
+        Item::create([
+            'name' => 'devPsycho',
+            'medias' => [
+                "default/SANTE/devPsycho/zone1.png",
+                "default/SANTE/devPsycho/zone2.png",
+                "default/SANTE/devPsycho/zone3.png"
+            ],
+            'card_id' => 0,
+            'card_picture' => 'default/SANTE/devPsycho/carte.jpg',
             'thematic_id' => 3
         ]);
 
