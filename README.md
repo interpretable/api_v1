@@ -1,3 +1,7 @@
+# ⛔️ DEPRECATED
+
+[New __Interpretable__ API](https://github.com/interpretable/api) is now based on [__Cboard__ API](https://github.com/cboard-org/cboard-api).
+
 # Interpretabble-api
 Laravel based api for Interpretabble
 
